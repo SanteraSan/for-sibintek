@@ -9,6 +9,8 @@ import {Provider} from "react-redux";
 
 let store = createStore(reducers);
 
+window.store = store;
+
 ReactDOM.render(
     <React.StrictMode>
         <Provider store={store}>
