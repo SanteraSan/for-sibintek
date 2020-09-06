@@ -1,0 +1,8 @@
+.App{
+    font-family: 'Roboto';
+    display: grid;
+    height: 100vh;
+    grid-template-rows: 2fr 8fr 2fr;
+    grid-gap: 1px;
+    background-color: midnightblue;
+}

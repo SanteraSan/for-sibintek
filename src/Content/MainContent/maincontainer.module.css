@@ -1,0 +1,19 @@
+.mainContent{
+    background-color: lightblue;
+    display: grid;
+    grid-template-areas: "photo fio javascript" "info info javascript";
+    grid-gap: 5px;
+    grid-template-columns: 1fr 2fr 2fr;
+    grid-template-rows: 1fr 1fr;
+}
+.photo{
+    /*background-repeat: no-repeat;*/
+    grid-area: photo;
+    display: flex;
+    align-items: center;
+    background-color: lavender;
+}
+.photo img{
+    width: 100%;
+}
+

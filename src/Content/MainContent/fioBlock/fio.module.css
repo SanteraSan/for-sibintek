@@ -1,0 +1,16 @@
+.fio{
+    background-color: lavender;
+    grid-area: fio;
+    display: flex;
+    justify-content: space-around;
+}
+.fio h3{
+    text-align: center;
+}
+.fio .first_ul{
+    list-style: none;
+}
+.fio ul li span{
+    color: midnightblue;
+
+}
