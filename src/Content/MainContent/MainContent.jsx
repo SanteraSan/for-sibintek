@@ -1,9 +1,9 @@
-import React, {useState} from 'react';
+import React from 'react';
 import s from './maincontainer.module.css'
 import image from '../../uploads/морда.jpg'
 import Fio from "./fioBlock/Fio";
 import Information from "./InformBlock/Information";
-import Javascript from "./javascript/Javascript";
+import JobsContainer from "./job/JobsContainer";
 
 function MainContent(props) {
     return (
@@ -13,7 +13,7 @@ function MainContent(props) {
             </div>
             <Fio/>
             <Information/>
-            <Javascript/>
+            <JobsContainer/>
         </div>
     );
 }

@@ -1,5 +1,5 @@
 .App{
-    font-family: 'Roboto';
+    font-family: 'Roboto',sans-serif;
     display: grid;
     height: 100vh;
     grid-template-rows: 2fr 8fr 2fr;

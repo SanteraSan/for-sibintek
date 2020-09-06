@@ -4,4 +4,14 @@
     justify-content: space-around;
     align-items: center;
 }
+.header__logo{
+    max-width: 110px;
+    padding: 10px;
+}
+.logo__img{
+    width: 100%;
+}
+.header__contacts{
+    text-align: center;
+}
 

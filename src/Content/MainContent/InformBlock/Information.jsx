@@ -4,7 +4,7 @@ import s from "./info.module.css";
 function Information(props) {
     return (
         <div className={s.information}>
-            <h3>Стек используемых технологий</h3>
+            <h3 className={s.information__h3}>Стек используемых технологий</h3>
             <ul>
                 <div>
                     <li><b>HTML:</b><i> Семантическая вёрстка, БЭМ;</i></li>
