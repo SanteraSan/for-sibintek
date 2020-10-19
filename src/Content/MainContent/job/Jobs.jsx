@@ -9,7 +9,7 @@ const  Jobs = (props) => {
     useEffect(()=>{
         props.getJobs().then(response =>{
             setJob(response)})
-    },[]);
+    },[props]);
     // console.log(job[0].organisation);
     let jobElements = job.map((j,i) => <RenderJobsElement
         key={i}

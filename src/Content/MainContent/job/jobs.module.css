@@ -1,6 +1,7 @@
 .javascript{
     grid-area: javascript;
     background-color: lightgoldenrodyellow;
+    padding-bottom: 10px;
 }
 .javascript h2{
     text-align: center;

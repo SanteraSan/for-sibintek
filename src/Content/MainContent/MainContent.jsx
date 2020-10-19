@@ -8,9 +8,7 @@ import JobsContainer from "./job/JobsContainer";
 function MainContent(props) {
     return (
         <div className={s.mainContent}>
-            <div className={s.photo}>
-                <img src={image} alt="asd"/>
-            </div>
+            <div className={s.photo}></div>
             <Fio/>
             <Information/>
             <JobsContainer/>

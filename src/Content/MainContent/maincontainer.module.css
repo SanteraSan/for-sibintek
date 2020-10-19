@@ -3,17 +3,29 @@
     display: grid;
     grid-template-areas: "photo fio javascript" "info info javascript";
     grid-gap: 5px;
-    grid-template-columns: 1fr 2fr 2fr;
+    grid-template-columns: 300px 2fr 2fr;
     grid-template-rows: 1fr 1fr;
 }
 .photo{
-    /*background-repeat: no-repeat;*/
     grid-area: photo;
     display: flex;
     align-items: center;
-    background-color: lavender;
+    background-color: lavenderblush;
+    max-width: 100%;
+    background-image: url("../../uploads/морда.jpg");
+    background-size: cover;
+    background-position: center;
 }
 .photo img{
+    display: none;
     width: 100%;
+}
+
+@media (max-width: 600px) {
+   .mainContent{
+       grid-template-areas: "photo fio" "info info" "javascript javascript";
+       grid-template-columns: 300px;
+       grid-template-rows: 1fr 1fr 1fr;
+   }
 }
 
