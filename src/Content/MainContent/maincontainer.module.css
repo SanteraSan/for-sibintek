@@ -16,16 +16,19 @@
     background-size: cover;
     background-position: center;
 }
-.photo img{
-    display: none;
-    width: 100%;
-}
+
 
 @media (max-width: 600px) {
-   .mainContent{
-       grid-template-areas: "photo fio" "info info" "javascript javascript";
-       grid-template-columns: 300px;
-       grid-template-rows: 1fr 1fr 1fr;
+   .mainContent ,.mainContent button{
+       grid-template-areas: "photo photo" "fio fio" "info info" "javascript javascript";
+       grid-template-columns: 1fr;
+       grid-template-rows: 1fr 0.5fr 1fr 1fr;
+       font-size: 40px;
    }
+    .photo{
+        width: 100%;
+        background-size: contain;
+        background-repeat: no-repeat;
+    }
 }
 
