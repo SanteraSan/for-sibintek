@@ -1,10 +1,11 @@
 .mainContent{
+    position: relative;
     background-color: lightblue;
     display: grid;
     grid-template-areas: "photo fio javascript" "info info javascript";
     grid-gap: 5px;
     grid-template-columns: 300px 2fr 2fr;
-    grid-template-rows: 1fr 1fr;
+    grid-template-rows: 210px 210px;
 }
 .photo{
     grid-area: photo;
@@ -16,10 +17,32 @@
     background-size: cover;
     background-position: center;
 }
-
+.form{
+    display: flex;
+    flex-direction: column;
+    -webkit-justify-content: center;
+    justify-content: center;
+    align-items: center;
+    font-size: 25px;
+    text-align: center;
+}
+.form input, textarea{
+    margin-top: 10px;
+    margin-bottom: 10px;
+    width: 100%;
+    font-size: 15px;
+    padding: 5px;
+}
+.form .buttonBlockForm{
+    margin-top: 15px;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    -webkit-justify-content: space-around;
+}
 
 @media (max-width: 600px) {
-   .mainContent ,.mainContent button{
+    .mainContent ,.mainContent button{
        grid-template-areas: "photo photo" "fio fio" "info info" "javascript javascript";
        grid-template-columns: 1fr;
        grid-template-rows: 1fr 0.5fr 1fr 1fr;

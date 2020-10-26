@@ -1,12 +1,12 @@
 import React from 'react';
 import {Field, reduxForm} from "redux-form";
-import {addNewJob} from "../../../redux/reducers/jobReducer";
+import s from "../maincontainer.module.css"
 
 
 const JobMakerForm = (props) => {
     // debugger
     return (
-        <form onSubmit={props.handleSubmit}>
+        <form className={s.form} onSubmit={props.handleSubmit}>
             <div>
                 <label htmlFor="">Организация</label>
                 <div>
@@ -19,23 +19,26 @@ const JobMakerForm = (props) => {
                 </div>
             </div>
             <div>
-                <label htmlFor="">Должность</label>
+                <label className={s.label} htmlFor="">Должность</label>
                 <div>
-                <Field
-                    name="position"
-                    component="input"
-                    type="text"
-                    placeholder="Должность"
-                />
+                    <Field
+                        name="position"
+                        component="input"
+                        type="text"
+                        placeholder="Должность"
+                    />
                 </div>
             </div>
             <div>
-                <label htmlFor="">Должностные обязаности</label>
+                <label className={s.label} htmlFor="">Должностные обязаности</label>
                 <div>
-                <Field name="functions" component="textarea"/>
+                    <Field name="functions" component="textarea"/>
                 </div>
             </div>
-            <button>Отменить</button>
+            <div className={s.buttonBlockForm}>
+                <button>Сохранить</button>
+                <button onClick={() => props.toggle(false)}>Закрыть</button>
+            </div>
             {/*<button onClick={() => props.toggle(false)}>Сохранить</button>*/}
         </form>
     )
@@ -46,8 +49,8 @@ const JobMakerFormRedux = reduxForm({
 })(JobMakerForm)
 
 const NewJobMaker = (props) => {
-    const onSubmit = (formData) =>{
-        props.add(formData.organisation,formData.position,formData.functions);
+    const onSubmit = (formData) => {
+        props.add(formData);
         props.toggle(false)
         console.log(formData.organisation)
     }

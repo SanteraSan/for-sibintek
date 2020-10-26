@@ -1,26 +1,23 @@
+import getJobs from "../../Common/async/async";
+
 const ADD_JOB = 'ADD_JOB';
-const ADD_NEW_COUNTER = 'ADD_NEW_COUNTER';
+const DELETE_JOBS = 'DELETE_JOBS';
 
 let initialState = {
-    jobs: [],
-    counter:1
+    jobs: []
 };
 
 const jobReducer = (state = initialState,action) => {
     switch (action.type) {
         case ADD_JOB:
-            let newJob = {
-                organisation:action.newOrganisation,
-                position:action.newPosition,
-                functions:action.newFunctions
-            }
             return{
             ...state,
-            jobs:state.jobs.concat(newJob)
+            jobs:state.jobs.concat(action.newJob)
         };
-        case ADD_NEW_COUNTER:return {
+        case DELETE_JOBS:
+            return {
             ...state,
-            counter: action.newCounter
+            jobs:action.newJobsLength
         }
         default:
             return state;
@@ -28,7 +25,15 @@ const jobReducer = (state = initialState,action) => {
 
 };
 
-export const addNewJob = (newOrganisation,newPosition,newFunctions) => ({type:ADD_JOB,newOrganisation,newPosition,newFunctions});
-export const addNewCounter = (newCounter) => ({type:ADD_NEW_COUNTER,newCounter});
+export const addNewJob = (newJob) => ({type:ADD_JOB,newJob});
+export const deleteJobs = (newJobsLength) => ({type:DELETE_JOBS,newJobsLength});
+
+export const getAllJobs = () => {
+    return (dispatch) =>{
+    debugger
+    getJobs().then(data =>{
+        dispatch(addNewJob(data));
+    })
+}}
 
 export default jobReducer
