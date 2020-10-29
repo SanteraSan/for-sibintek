@@ -8,3 +8,8 @@
 .information .information__h3{
     margin-bottom: 0;
 }
+@media (max-width: 600px) {
+    .information{
+        font-size: 1.7em;
+    }
+}

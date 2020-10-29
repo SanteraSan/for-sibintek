@@ -1,7 +1,8 @@
 .javascript{
     grid-area: javascript;
     background-color: lightgoldenrodyellow;
-    padding-bottom: 10px;
+    padding-bottom: 20px;
+
 
 }
 .javascript h2{
@@ -22,7 +23,17 @@
     align-items: center;
 }
 .javascript button{
-    padding: 10px;
     border: 1px solid midnightblue;
-    border-radius: 5px;
+    border-radius: 15px;
+    padding: 15px;
+}
+@media (max-width: 600px) {
+    .javascript{
+        font-size: 1.7em;
+    }
+    javascript button{
+        border: 1px solid midnightblue;
+        border-radius: 15px;
+        padding: 15px;
+    }
 }

@@ -1,4 +1,4 @@
-.mainContent{
+.mainContent {
     position: relative;
     background-color: lightblue;
     display: grid;
@@ -7,7 +7,8 @@
     grid-template-columns: 300px 2fr 2fr;
     grid-template-rows: 210px 210px;
 }
-.photo{
+
+.photo {
     grid-area: photo;
     display: flex;
     align-items: center;
@@ -17,7 +18,8 @@
     background-size: cover;
     background-position: center;
 }
-.form{
+
+.form {
     display: flex;
     flex-direction: column;
     -webkit-justify-content: center;
@@ -26,14 +28,16 @@
     font-size: 25px;
     text-align: center;
 }
-.form input, textarea{
+
+.form input, textarea {
     margin-top: 10px;
     margin-bottom: 10px;
     width: 100%;
     font-size: 15px;
     padding: 5px;
 }
-.form .buttonBlockForm{
+
+.form .buttonBlockForm {
     margin-top: 15px;
     width: 100%;
     display: flex;
@@ -42,16 +46,36 @@
 }
 
 @media (max-width: 600px) {
-    .mainContent ,.mainContent button{
-       grid-template-areas: "photo photo" "fio fio" "info info" "javascript javascript";
-       grid-template-columns: 1fr;
-       grid-template-rows: 1fr 0.5fr 1fr 1fr;
-       font-size: 40px;
-   }
-    .photo{
+    .mainContent {
+        grid-template-areas: "photo photo" "fio fio" "info info" "javascript javascript";
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 0.5fr 1fr 1fr;
+        font-size: 2em;
+    }
+
+    .mainContent button{
+        font-size: 1em;
+        padding: 1em;
+    }
+
+    .photo {
         width: 100%;
         background-size: contain;
         background-repeat: no-repeat;
     }
+    .form label{
+        font-size: 1.7em;
+    }
+    .form input, textarea {
+        margin-top: 10px;
+        margin-bottom: 10px;
+        width: 100%;
+        font-size: 2em;
+    }
+    .form button{
+        padding: 0.5em;
+        font-size: 2em;
+    }
+
 }
 

@@ -3,6 +3,7 @@
     grid-area: fio;
     display: flex;
     justify-content: space-around;
+
 }
 .fio h3{
     text-align: center;
@@ -13,4 +14,9 @@
 .fio ul li span{
     color: midnightblue;
 
+}
+@media (max-width: 600px) {
+    .fio{
+        font-size: 1.7em;
+    }
 }
